@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Favorite Fruit Poll</title>
+  <style>
+    body { font-family: Arial, sans-serif; text-align: center; margin-top: 50px; }
+    button { margin: 10px; padding: 10px 20px; font-size: 16px; }
+    #result { margin-top: 20px; font-size: 18px; color: green; }
+  </style>
+</head>
+<body>
+  <h1>🍎 What's your favorite fruit?</h1>
+  <button onclick="vote('Apple')">Apple</button>
+  <button onclick="vote('Banana')">Banana</button>
+  <button onclick="vote('Cherry')">Cherry</button>
+  <p id="result"></p>
+
+  <script>
+    function vote(fruit) {
+      document.getElementById('result').textContent = `Thanks for voting for ${fruit}!`;
+      // Optional: Add a fetch() to record the vote to a backend
+    }
+  </script>
+</body>
+</html>
